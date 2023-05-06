@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HDu-5z-AYb">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Rick & Morty-->
+        <scene sceneID="tZf-y5-TzM">
+            <objects>
+                <tableViewController id="G2f-mS-9ik" customClass="CharactersViewController" customModule="Rick_and_Morty" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="XK7-67-gZd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.27843138579999999" green="0.60000002379999995" blue="0.47843140360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Character" rowHeight="184" id="Q7S-Zt-yWs" customClass="CharacterCell" customModule="Rick_and_Morty" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="184"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q7S-Zt-yWs" id="bvE-2O-zfx">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="184"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="oMp-Z3-Yoc">
+                                            <rect key="frame" x="169" y="31" width="60.333333333333343" height="122"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMU-yS-J22">
+                                                    <rect key="frame" x="0.0" y="0.0" width="49.666666666666664" height="35.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgt-WC-m6d">
+                                                    <rect key="frame" x="0.0" y="58.333333333333336" width="42" height="20.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Species" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6j-A6-6B2">
+                                                    <rect key="frame" x="0.0" y="101.66666666666666" width="60.333333333333336" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OKb-KY-8l8">
+                                            <rect key="frame" x="30" y="21" width="131" height="142"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="OKb-KY-8l8" firstAttribute="leading" secondItem="bvE-2O-zfx" secondAttribute="leadingMargin" constant="10" id="0eI-Nr-mhZ"/>
+                                        <constraint firstItem="oMp-Z3-Yoc" firstAttribute="top" secondItem="bvE-2O-zfx" secondAttribute="topMargin" constant="20" id="1cv-nx-3fY"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="OKb-KY-8l8" secondAttribute="bottom" constant="10" id="8E7-YD-60s"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="oMp-Z3-Yoc" secondAttribute="bottom" constant="20" id="L1K-Sh-aOk"/>
+                                        <constraint firstItem="OKb-KY-8l8" firstAttribute="top" secondItem="bvE-2O-zfx" secondAttribute="topMargin" constant="10" id="ObD-47-TvM"/>
+                                        <constraint firstItem="oMp-Z3-Yoc" firstAttribute="centerY" secondItem="bvE-2O-zfx" secondAttribute="centerY" id="QTC-sE-N9z"/>
+                                        <constraint firstItem="OKb-KY-8l8" firstAttribute="width" secondItem="bvE-2O-zfx" secondAttribute="width" multiplier="0.333333" id="hzH-Pr-QCQ"/>
+                                        <constraint firstItem="oMp-Z3-Yoc" firstAttribute="leading" secondItem="OKb-KY-8l8" secondAttribute="trailing" constant="8" symbolic="YES" id="wEw-ty-QDE"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="characterImage" destination="OKb-KY-8l8" id="x0P-8d-0jI"/>
+                                    <outlet property="nameLabel" destination="NMU-yS-J22" id="XnN-P2-5bF"/>
+                                    <outlet property="spesiesLabel" destination="p6j-A6-6B2" id="FfK-xI-nOb"/>
+                                    <outlet property="typeLabel" destination="Xgt-WC-m6d" id="ujP-H0-lFi"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="G2f-mS-9ik" id="QmO-2t-OZ7"/>
+                            <outlet property="delegate" destination="G2f-mS-9ik" id="hYk-cj-ByZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Rick &amp; Morty" id="UAu-PI-Kty"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bNe-vE-lEr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="290.83969465648852" y="-24.647887323943664"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aDh-vU-0mw">
+            <objects>
+                <navigationController id="HDu-5z-AYb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="746-hG-IaH">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="G2f-mS-9ik" kind="relationship" relationship="rootViewController" id="rv4-UZ-iSN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lUG-bS-QRh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-615" y="-24"/>
+        </scene>
+    </scenes>
+</document>
