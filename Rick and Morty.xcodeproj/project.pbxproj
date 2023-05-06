@@ -13,7 +13,7 @@
 		78A44FB02A068844002E5B33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78A44FAE2A068844002E5B33 /* Main.storyboard */; };
 		78A44FB22A068845002E5B33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78A44FB12A068845002E5B33 /* Assets.xcassets */; };
 		78A44FB52A068845002E5B33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78A44FB32A068845002E5B33 /* LaunchScreen.storyboard */; };
-		78A44FC12A0689F1002E5B33 /* CharacterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A44FC02A0689F1002E5B33 /* CharacterInfo.swift */; };
+		78A44FC12A0689F1002E5B33 /* RickAndMorty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A44FC02A0689F1002E5B33 /* RickAndMorty.swift */; };
 		78A44FCD2A0693D3002E5B33 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A44FCC2A0693D3002E5B33 /* CharacterCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		78A44FB12A068845002E5B33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78A44FB42A068845002E5B33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78A44FB62A068845002E5B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		78A44FC02A0689F1002E5B33 /* CharacterInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterInfo.swift; sourceTree = "<group>"; };
+		78A44FC02A0689F1002E5B33 /* RickAndMorty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMorty.swift; sourceTree = "<group>"; };
 		78A44FCC2A0693D3002E5B33 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,7 +108,7 @@
 		78A44FC22A0689F6002E5B33 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				78A44FC02A0689F1002E5B33 /* CharacterInfo.swift */,
+				78A44FC02A0689F1002E5B33 /* RickAndMorty.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,7 +196,7 @@
 				78A44FA92A068844002E5B33 /* AppDelegate.swift in Sources */,
 				78A44FAB2A068844002E5B33 /* SceneDelegate.swift in Sources */,
 				78A44FCD2A0693D3002E5B33 /* CharacterCell.swift in Sources */,
-				78A44FC12A0689F1002E5B33 /* CharacterInfo.swift in Sources */,
+				78A44FC12A0689F1002E5B33 /* RickAndMorty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

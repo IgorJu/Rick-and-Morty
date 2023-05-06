@@ -58,7 +58,7 @@ extension CharactersViewController {
             
             do {
                 let decoder = JSONDecoder()
-                let character = try decoder.decode(CharacterInfo.self, from: data)
+                let character = try decoder.decode(RickAndMorty.self, from: data)
                 print(character)
             } catch {
                 print(error.localizedDescription)
@@ -75,7 +75,7 @@ extension CharactersViewController {
             
             do {
                 let decoder = JSONDecoder()
-                let character = try decoder.decode(CharacterInfo.self, from: data)
+                let character = try decoder.decode(RickAndMorty.self, from: data)
                 print(character)
             } catch {
                 print(error.localizedDescription)
