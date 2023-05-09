@@ -6,81 +6,66 @@
 //
 
 import UIKit
-
-enum Link: CaseIterable {
-    case rickURL
-    case mortyURL
-    
-    var url: URL {
-        switch self {
-        case .rickURL:
-            return URL(string: "https://rickandmortyapi.com/api/character/1")!
-        case .mortyURL:
-            return URL(string: "https://rickandmortyapi.com/api/character/2")!
-        }
-    }
-}
-
+   
 final class CharactersViewController: UITableViewController {
-    private let characters = Link.allCases
+    
+    private var rickAndMorty: RickAndMorty?
+    private let character: [Character] = []
+    private let networkManager = NetworkManager.shared
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.rowHeight = 100
+    }
     
     //MARK: - DataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        characters.count
+        rickAndMorty?.results.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Character", for: indexPath)
+        guard let cell = cell as? CharacterCell else { return UITableViewCell() }
+        let personage = rickAndMorty?.results[indexPath.row]
         cell.backgroundConfiguration = .clear()
-        
+        cell.configure(with: personage)
         return cell
     }
-    
-    //MARK: - Delegate
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let link = characters[indexPath.row]
-        
-        switch link {
-        case .rickURL: fetchRick()
-        case .mortyURL: fetchMorty()
-        }
-    }
 }
+    
+
 
 //MARK: - Networking
 extension CharactersViewController {
-    private func fetchRick() {
-        URLSession.shared.dataTask(with: Link.rickURL.url) { data, _, error in
-            guard let data else {
-                print(error?.localizedDescription ?? "No error Description")
-                return
+    func fetchCharacters() {
+        networkManager.fetch(RickAndMorty.self, from: Link.characterURL.url) { [weak self] result in
+            switch result {
+            case .success(let rickAndMorty):
+                self?.rickAndMorty = rickAndMorty
+                self?.tableView.reloadData()
+            case .failure(let error):
+                print(error)
             }
-            
-            do {
-                let decoder = JSONDecoder()
-                let character = try decoder.decode(RickAndMorty.self, from: data)
-                print(character)
-            } catch {
-                print(error.localizedDescription)
-            }
-        }.resume()
-    }
-    
-    private func fetchMorty() {
-        URLSession.shared.dataTask(with: Link.mortyURL.url) { data, _, error in
-            guard let data else {
-                print(error?.localizedDescription ?? "No error Description")
-                return
-            }
-            
-            do {
-                let decoder = JSONDecoder()
-                let character = try decoder.decode(RickAndMorty.self, from: data)
-                print(character)
-            } catch {
-                print(error.localizedDescription)
-            }
-        }.resume()
+        }
     }
 }
+    
+//    private func fetchLocations() {
+//        URLSession.shared.dataTask(with: Link.locationURL.url) { data, _, error in
+//            guard let data else {
+//                print(error?.localizedDescription ?? "No error Description")
+//                return
+//            }
+//
+//            do {
+//                let decoder = JSONDecoder()
+//                let character = try decoder.decode(Locations.self, from: data)
+//                print(character)
+//            } catch {
+//                print(error.localizedDescription)
+//            }
+//        }.resume()
+//    }
+
+
 
