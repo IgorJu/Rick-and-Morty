@@ -8,26 +8,40 @@
 import Foundation
 
 struct RickAndMorty: Decodable {
-    let results: [Character]
+    let results: [Personage]
 }
 
-struct Character: Decodable {
+struct Personage: Decodable {
     let name: String
     let status: String
     let species: String
-    let type: String
     let gender: String
     let image: URL
     
     var description: String {
         """
-Name: \(name)
-Status: \(status)
-Spesies: \(species)
-Type: \(type)
-Gender: \(gender)
+Name:   \(name)
+Status:   \(status)
+Spesies:   \(species)
+Gender:   \(gender)
 """
     }
 }
 
 //MARK: - Location R&M
+struct RickAndMortyLocation: Decodable {
+    let results: [Location]
+}
+
+struct Location: Decodable {
+    let name: String
+    let type: String
+    let dimension: String
+    
+    var description: String {
+        """
+Type: \(type)
+Dimension: \(dimension)
+"""
+    }
+}

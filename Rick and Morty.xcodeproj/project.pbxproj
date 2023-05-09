@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78389EB62A0AC13000363FCD /* DetailCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78389EB52A0AC13000363FCD /* DetailCharacterViewController.swift */; };
+		78389EB82A0ACA9000363FCD /* Extension + UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78389EB72A0ACA9000363FCD /* Extension + UIViewController.swift */; };
+		78389EBB2A0AD0C300363FCD /* LocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78389EBA2A0AD0C300363FCD /* LocationListViewController.swift */; };
+		78389EBD2A0AD24100363FCD /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78389EBC2A0AD24100363FCD /* LocationCell.swift */; };
 		7847B7162A0930FA0077ED0D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7847B7152A0930FA0077ED0D /* MainViewController.swift */; };
 		78A44FA92A068844002E5B33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A44FA82A068844002E5B33 /* AppDelegate.swift */; };
 		78A44FAB2A068844002E5B33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A44FAA2A068844002E5B33 /* SceneDelegate.swift */; };
@@ -20,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		78389EB52A0AC13000363FCD /* DetailCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCharacterViewController.swift; sourceTree = "<group>"; };
+		78389EB72A0ACA9000363FCD /* Extension + UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIViewController.swift"; sourceTree = "<group>"; };
+		78389EBA2A0AD0C300363FCD /* LocationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewController.swift; sourceTree = "<group>"; };
+		78389EBC2A0AD24100363FCD /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		7847B7152A0930FA0077ED0D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = "Rick and Morty/ViewControllers/MainViewController.swift"; sourceTree = SOURCE_ROOT; };
 		78A44FA52A068844002E5B33 /* Rick and Morty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rick and Morty.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A44FA82A068844002E5B33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78389EB92A0ACB5C00363FCD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				78389EB72A0ACA9000363FCD /* Extension + UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		78A44F9C2A068844002E5B33 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +87,7 @@
 				78A44FC72A069261002E5B33 /* Views */,
 				78A44FBE2A06893B002E5B33 /* Resources */,
 				78A44FBD2A06892F002E5B33 /* App */,
+				78389EB92A0ACB5C00363FCD /* Extensions */,
 			);
 			path = "Rick and Morty";
 			sourceTree = "<group>";
@@ -78,8 +95,10 @@
 		78A44FBC2A06891B002E5B33 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				78A44FAC2A068844002E5B33 /* CharactersViewController.swift */,
 				7847B7152A0930FA0077ED0D /* MainViewController.swift */,
+				78A44FAC2A068844002E5B33 /* CharactersViewController.swift */,
+				78389EB52A0AC13000363FCD /* DetailCharacterViewController.swift */,
+				78389EBA2A0AD0C300363FCD /* LocationListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -123,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				78A44FCC2A0693D3002E5B33 /* CharacterCell.swift */,
+				78389EBC2A0AD24100363FCD /* LocationCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,9 +228,13 @@
 			files = (
 				78A44FAD2A068844002E5B33 /* CharactersViewController.swift in Sources */,
 				78A44FA92A068844002E5B33 /* AppDelegate.swift in Sources */,
+				78389EBB2A0AD0C300363FCD /* LocationListViewController.swift in Sources */,
 				78A44FAB2A068844002E5B33 /* SceneDelegate.swift in Sources */,
 				78D5178B2A0A768900DA3BE4 /* NetworkManager.swift in Sources */,
 				7847B7162A0930FA0077ED0D /* MainViewController.swift in Sources */,
+				78389EBD2A0AD24100363FCD /* LocationCell.swift in Sources */,
+				78389EB62A0AC13000363FCD /* DetailCharacterViewController.swift in Sources */,
+				78389EB82A0ACA9000363FCD /* Extension + UIViewController.swift in Sources */,
 				78A44FCD2A0693D3002E5B33 /* CharacterCell.swift in Sources */,
 				78A44FC12A0689F1002E5B33 /* RickAndMorty.swift in Sources */,
 			);

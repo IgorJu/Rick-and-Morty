@@ -10,7 +10,6 @@ import UIKit
 final class CharactersViewController: UITableViewController {
     
     private var rickAndMorty: RickAndMorty?
-    private let character: [Character] = []
     private let networkManager = NetworkManager.shared
     
     override func viewDidLoad() {
@@ -26,19 +25,25 @@ final class CharactersViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Character", for: indexPath)
         guard let cell = cell as? CharacterCell else { return UITableViewCell() }
+        
         let personage = rickAndMorty?.results[indexPath.row]
-        cell.backgroundConfiguration = .clear()
         cell.configure(with: personage)
+        cell.backgroundConfiguration = .clear()
         return cell
     }
-}
     
-
+    //MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        guard let detailVC = segue.destination as? DetailCharacterViewController else { return }
+        detailVC.personage = rickAndMorty?.results[indexPath.row]
+    }
+}
 
 //MARK: - Networking
 extension CharactersViewController {
-    func fetchCharacters() {
-        networkManager.fetch(RickAndMorty.self, from: Link.characterURL.url) { [weak self] result in
+    func fetchPersonages() {
+        networkManager.fetch(RickAndMorty.self, from: Link.personageURL.url) { [weak self] result in
             switch result {
             case .success(let rickAndMorty):
                 self?.rickAndMorty = rickAndMorty
@@ -49,23 +54,3 @@ extension CharactersViewController {
         }
     }
 }
-    
-//    private func fetchLocations() {
-//        URLSession.shared.dataTask(with: Link.locationURL.url) { data, _, error in
-//            guard let data else {
-//                print(error?.localizedDescription ?? "No error Description")
-//                return
-//            }
-//
-//            do {
-//                let decoder = JSONDecoder()
-//                let character = try decoder.decode(Locations.self, from: data)
-//                print(character)
-//            } catch {
-//                print(error.localizedDescription)
-//            }
-//        }.resume()
-//    }
-
-
-

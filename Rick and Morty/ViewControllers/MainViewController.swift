@@ -11,26 +11,29 @@ final class MainViewController: UIViewController {
     
     private let networkManager = NetworkManager.shared
 
+    //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        let imageView = UIImageView(image: (UIImage(named: "RickMorty")))
-        imageView.frame = view.bounds
-        view.insertSubview(imageView, at: 0)
+        setupBackgroundImage(with: "RickMorty")
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showPersonages" {
             guard let charactersVC = segue.destination as? CharactersViewController else  { return }
-            charactersVC.fetchCharacters()
+            charactersVC.fetchPersonages()
+        } else {
+            guard let locationsVC = segue.destination as? LocationListViewController else { return }
+            locationsVC.fetchLocations()
         }
     }
 
-    
 //MARK: - IBActions
     @IBAction func showPersonagesTapped(_ sender: Any) {
         performSegue(withIdentifier: "showPersonages", sender: nil)
     }
     
     @IBAction func showLocationsTapped(_ sender: Any) {
+        performSegue(withIdentifier: "showLocations", sender: nil)
     }
     
 }

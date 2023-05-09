@@ -8,12 +8,12 @@
 import Foundation
 
 enum Link {
-    case characterURL
+    case personageURL
     case locationURL
     
     var url: URL {
         switch self {
-        case .characterURL:
+        case .personageURL:
             return URL(string: "https://rickandmortyapi.com/api/character")!
         case .locationURL:
             return URL(string: "https://rickandmortyapi.com/api/location")!
@@ -32,6 +32,7 @@ final class NetworkManager {
     
     private init () {}
     
+    //MARK: - Fetch Methods
     func fetchImage(from url: URL, completion: @escaping(Result<Data, NetworkError>) -> Void) {
         DispatchQueue.global().async {
             guard let imageData = try? Data(contentsOf: url) else {
@@ -63,11 +64,4 @@ final class NetworkManager {
             }
         }.resume()
     }
-        
-    
-        
-        
-        
-        
-    
 }
