@@ -28,7 +28,7 @@ Gender:   \(gender)
     }
 }
 
-//MARK: - Location R&M
+//MARK: - Location Rick and Morty
 struct RickAndMortyLocation: Decodable {
     let results: [Location]
 }

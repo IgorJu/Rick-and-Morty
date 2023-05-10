@@ -12,7 +12,7 @@ final class CharacterCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var characterImageView: UIImageView! {
         didSet {
-            characterImageView.layer.cornerRadius = characterImageView.frame.height / 2
+            characterImageView.layer.cornerRadius = characterImageView.frame.height / 3
             
         }
     }

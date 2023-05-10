@@ -6,7 +6,7 @@
 //
 
 import UIKit
-   
+
 final class CharactersViewController: UITableViewController {
     
     private var rickAndMorty: RickAndMorty?
@@ -14,7 +14,7 @@ final class CharactersViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 100
+        tableView.rowHeight = 120
     }
     
     //MARK: - DataSource

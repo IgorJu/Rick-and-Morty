@@ -27,7 +27,8 @@ final class DetailCharacterViewController: UIViewController {
         fetchImage()
         setupBackgroundImage(with: "RickDetail")
     }
-    
+   
+    //MARK: - Networking
     private func fetchImage() {
         networkManager.fetchImage(from: personage.image) { [weak self] result in
             switch result {

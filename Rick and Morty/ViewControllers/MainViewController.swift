@@ -10,7 +10,7 @@ import UIKit
 final class MainViewController: UIViewController {
     
     private let networkManager = NetworkManager.shared
-
+    
     //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +26,8 @@ final class MainViewController: UIViewController {
             locationsVC.fetchLocations()
         }
     }
-
-//MARK: - IBActions
+    
+    //MARK: - IBActions
     @IBAction func showPersonagesTapped(_ sender: Any) {
         performSegue(withIdentifier: "showPersonages", sender: nil)
     }
