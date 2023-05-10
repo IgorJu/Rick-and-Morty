@@ -9,8 +9,6 @@ import UIKit
 
 final class MainViewController: UIViewController {
     
-    private let networkManager = NetworkManager.shared
-    
     //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
