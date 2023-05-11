@@ -19,11 +19,9 @@ final class MainViewController: UIViewController {
         if segue.identifier == "showPersonages" {
             guard let charactersVC = segue.destination as? CharactersViewController else  { return }
             charactersVC.fetchPersonages()
-        } else {
-            guard let locationsVC = segue.destination as? LocationListViewController else { return }
-            locationsVC.fetchLocations()
         }
     }
+    
     
     //MARK: - IBActions
     @IBAction func showPersonagesTapped(_ sender: Any) {

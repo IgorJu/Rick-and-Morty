@@ -17,31 +17,35 @@ struct Personage: Decodable {
     let species: String
     let gender: String
     let image: URL
+    let location: Location
+    let episode: [URL]
     
     var description: String {
         """
-Name:   \(name)
-Status:   \(status)
-Spesies:   \(species)
-Gender:   \(gender)
-"""
+    Name: \(name)
+    Status: \(status)
+    Spesies: \(species)
+    Gender: \(gender)
+    Location: \(location.name)
+    """
     }
-}
-
-//MARK: - Location Rick and Morty
-struct RickAndMortyLocation: Decodable {
-    let results: [Location]
 }
 
 struct Location: Decodable {
     let name: String
-    let type: String
-    let dimension: String
+}
+
+struct Episode: Decodable {
+    let name: String
+    let date: String
+    let episode: String
+    let characters: [URL]
     
-    var description: String {
-        """
-Type: \(type)
-Dimension: \(dimension)
-"""
+    enum CodingKeys: String, CodingKey {
+        case name = "name"
+        case date = "air_date"
+        case episode = "episode"
+        case characters = "characters"
     }
 }
+

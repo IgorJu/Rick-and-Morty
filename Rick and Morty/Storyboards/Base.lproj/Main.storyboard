@@ -16,26 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKU-Dp-LPa">
-                                <rect key="frame" x="50" y="743" width="293" height="45"/>
-                                <color key="backgroundColor" red="0.074509806930000005" green="0.074509806930000005" blue="0.2117646933" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="a2B-RF-71L"/>
-                                </constraints>
-                                <color key="tintColor" red="0.87937103450660348" green="1" blue="0.43561419746571561" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Show Locations">
-                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="showLocationsTapped:" destination="Dtr-gJ-JQQ" eventType="touchUpInside" id="5HH-Ig-1OG"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sR7-Mb-aT0">
                                 <rect key="frame" x="50" y="133" width="293" height="45"/>
                                 <color key="backgroundColor" red="0.72156864399999998" green="0.8078432083" blue="0.42352938649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -60,10 +40,7 @@
                         <viewLayoutGuide key="safeArea" id="Rrl-TU-p3D"/>
                         <color key="backgroundColor" red="0.96078431610000004" green="0.96078431610000004" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="OKU-Dp-LPa" firstAttribute="trailing" secondItem="sR7-Mb-aT0" secondAttribute="trailing" id="3HV-T3-f6f"/>
                             <constraint firstItem="sR7-Mb-aT0" firstAttribute="leading" secondItem="Rrl-TU-p3D" secondAttribute="leading" constant="50" id="4dp-7b-mJE"/>
-                            <constraint firstItem="Rrl-TU-p3D" firstAttribute="bottom" secondItem="OKU-Dp-LPa" secondAttribute="bottom" constant="30" id="Fnn-Su-m89"/>
-                            <constraint firstItem="OKU-Dp-LPa" firstAttribute="leading" secondItem="sR7-Mb-aT0" secondAttribute="leading" id="cfb-aP-nFG"/>
                             <constraint firstItem="Rrl-TU-p3D" firstAttribute="trailing" secondItem="sR7-Mb-aT0" secondAttribute="trailing" constant="50" id="y3M-v1-OiB"/>
                             <constraint firstItem="sR7-Mb-aT0" firstAttribute="top" secondItem="Rrl-TU-p3D" secondAttribute="top" constant="30" id="yrE-St-elx"/>
                         </constraints>
@@ -71,70 +48,11 @@
                     <navigationItem key="navigationItem" title="Rick &amp; Morty" id="XhX-m0-tMi"/>
                     <connections>
                         <segue destination="G2f-mS-9ik" kind="show" identifier="showPersonages" id="gX6-sM-h2K"/>
-                        <segue destination="3km-NX-H4o" kind="show" identifier="showLocations" id="RNX-s3-qSA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nru-2v-bcC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-190.07633587786259" y="-25.35211267605634"/>
-        </scene>
-        <!--Locations-->
-        <scene sceneID="3GQ-Da-TfQ">
-            <objects>
-                <tableViewController id="3km-NX-H4o" customClass="LocationListViewController" customModule="Rick_and_Morty" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="SXQ-YD-cHY">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.1215686351" green="0.1215686351" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Location" rowHeight="118" id="7OU-O4-2IE" customClass="LocationCell" customModule="Rick_and_Morty" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="393" height="118"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7OU-O4-2IE" id="pe7-OU-Kdw">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="118"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="sjK-zg-CBH">
-                                            <rect key="frame" x="30" y="21" width="333" height="76"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVw-la-Lgt">
-                                                    <rect key="frame" x="0.0" y="0.0" width="67.666666666666671" height="57.333333333333336"/>
-                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
-                                                    <color key="textColor" red="0.87843137979999997" green="0.99607843159999998" blue="0.4352940917" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HU6-11-csK">
-                                                    <rect key="frame" x="0.0" y="57.333333333333321" width="83.333333333333329" height="18.666666666666664"/>
-                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                                    <color key="textColor" red="0.87843137979999997" green="0.99607843159999998" blue="0.4352940917" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="sjK-zg-CBH" firstAttribute="leading" secondItem="pe7-OU-Kdw" secondAttribute="leadingMargin" constant="10" id="0Dh-Mi-aAt"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="sjK-zg-CBH" secondAttribute="bottom" constant="10" id="R0H-5S-1CK"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="sjK-zg-CBH" secondAttribute="trailing" constant="10" id="bV2-hm-hL2"/>
-                                        <constraint firstItem="sjK-zg-CBH" firstAttribute="top" secondItem="pe7-OU-Kdw" secondAttribute="topMargin" constant="10" id="wh1-tF-XNa"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="descriptionLabel" destination="HU6-11-csK" id="fXG-NA-Xpv"/>
-                                    <outlet property="nameLabel" destination="qVw-la-Lgt" id="3dS-vN-sgV"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="3km-NX-H4o" id="MOO-Uj-GdD"/>
-                            <outlet property="delegate" destination="3km-NX-H4o" id="IV7-80-AWJ"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Locations" id="Dw4-Ca-g2y"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xCN-8n-elO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="641.98473282442751" y="396.47887323943667"/>
         </scene>
         <!--Rick & Morty-->
         <scene sceneID="tZf-y5-TzM">
@@ -193,7 +111,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNe-vE-lEr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="641.98473282442751" y="-308.45070422535213"/>
+            <point key="canvasLocation" x="579" y="-25"/>
         </scene>
         <!--Detail Character View Controller-->
         <scene sceneID="xoN-1T-i81">
@@ -227,7 +145,14 @@
                             <constraint firstItem="Sc6-Ug-knf" firstAttribute="trailing" secondItem="b7s-eI-IVK" secondAttribute="trailing" constant="16" id="hTy-ef-YPc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="CqH-du-gba"/>
+                    <navigationItem key="navigationItem" id="CqH-du-gba">
+                        <barButtonItem key="rightBarButtonItem" title="Episodes" id="T70-Pq-lcI">
+                            <color key="tintColor" red="0.87843137979999997" green="0.99607843159999998" blue="0.4352940917" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="QMX-eR-qCa" kind="show" id="gcM-Id-Eft"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="characterImageView" destination="Ir0-Nu-lz7" id="2uM-2n-Ln6"/>
                         <outlet property="descriptionLabel" destination="b7s-eI-IVK" id="lkW-oz-kWx"/>
@@ -235,7 +160,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLS-0f-TGG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1409.9236641221373" y="-308.45070422535213"/>
+            <point key="canvasLocation" x="1326" y="-25"/>
+        </scene>
+        <!--Episodes with personage-->
+        <scene sceneID="sQQ-WN-zDB">
+            <objects>
+                <tableViewController id="QMX-eR-qCa" customClass="EpisodeListViewController" customModule="Rick_and_Morty" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="rWG-2I-cQc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.1215686351" green="0.1215686351" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="episode" id="RH3-pe-Np5">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RH3-pe-Np5" id="icT-Wa-ko5">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QMX-eR-qCa" id="C1b-Td-Cat"/>
+                            <outlet property="delegate" destination="QMX-eR-qCa" id="BkU-ZS-VvB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Episodes with personage" id="q5F-6V-83S"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dlo-oT-pcq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2109" y="-25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aDh-vU-0mw">

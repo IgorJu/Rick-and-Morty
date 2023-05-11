@@ -20,6 +20,7 @@ final class DetailCharacterViewController: UIViewController {
     
     var personage: Personage!
     
+    //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         title = personage.name
@@ -27,7 +28,12 @@ final class DetailCharacterViewController: UIViewController {
         fetchImage()
         setupBackgroundImage(with: "RickDetail")
     }
-   
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let episodeVC = segue.destination as? EpisodeListViewController else { return }
+                episodeVC.personage = personage
+    }
+    
     //MARK: - Networking
     private func fetchImage() {
         networkManager.fetchImage(from: personage.image) { [weak self] result in
