@@ -9,14 +9,11 @@ import Foundation
 
 enum Link {
     case personageURL
-    case locationURL
     
     var url: URL {
         switch self {
         case .personageURL:
             return URL(string: "https://rickandmortyapi.com/api/character")!
-        case .locationURL:
-            return URL(string: "https://rickandmortyapi.com/api/location")!
         }
     }
 }

@@ -13,7 +13,6 @@ class EpisodeListViewController: UITableViewController {
     
     var personage: Personage!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Episode with \(personage.name)"
