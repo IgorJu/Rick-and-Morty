@@ -13,6 +13,12 @@ class EpisodeListViewController: UITableViewController {
     
     var personage: Personage!
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Episode with \(personage.name)"
+    }
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return personage.episode.count
